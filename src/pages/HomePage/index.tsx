@@ -6,7 +6,7 @@ const HomePage = () => {
   return (
     <Page id='home-page' className='home-page'>
         <Container>
-            Hello
+            test
         </Container>
     </Page>
   )
