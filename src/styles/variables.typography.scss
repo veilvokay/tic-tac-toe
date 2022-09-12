@@ -1,0 +1,25 @@
+:root {
+    // FONT
+    --main-font: 'BoldenVan', sans-serif;
+
+    // FONT SIZE
+    --font-size-h1: #{pxr(64)};
+    --font-size-h2: #{pxr(32)};
+    --font-size-h3: #{pxr(24)};
+    --font-size-h4: #{pxr(16)};
+
+    // FONT WEIGHT
+    --font-weight-400: 400;
+
+    // LETTER SPACING
+    --letter-spacing-h1: 0;
+    --letter-spacing-h2: 0;
+    --letter-spacing-h3: 0;
+    --letter-spacing-h4: 0;
+
+    // LINE HEIGHT
+    --line-height-h1: #{pxr(64)};
+    --line-height-h2: #{pxr(32)};
+    --line-height-h3: #{pxr(24)};
+    --line-height-h4: #{pxr(16)};
+}
