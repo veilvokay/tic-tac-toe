@@ -3,15 +3,10 @@
 .home-page {
     width: 100vw;
     height: 100vh;
-    &__title {
-        margin: 0 auto pxr(48);
-        padding-top: pxr(100);
-        width: 100%;
-        text-align: center;
-    }
 
     &__content {
         width: 100%;
+        height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;

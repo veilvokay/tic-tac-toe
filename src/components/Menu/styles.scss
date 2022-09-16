@@ -9,8 +9,67 @@
     width: pxr(400);
 
     &__link {
+        &.first {
+            background-color: var(--color-orange);
+            color: var(--color-blue-dark);
+            &:hover {
+                background-color: rgba($color: #f3b137, $alpha: 0.75 )
+            }
+        }
+        &.second {
+            background-color: var(--color-turquoise);
+            color: var(--color-blue-dark);
+            &:hover {
+                background-color: rgba($color: #30c4be, $alpha: 0.75 )
+            }
+        }
         &:not(:last-of-type) {
+            margin-bottom: pxr(16);
+        }
+    }
+
+    .mark-picker {
+        margin: pxr(32);
+        padding: pxr(24);
+        width: 100%;
+        background-color: var(--color-blue-light);
+        border-radius: pxr(12);
+        &__title {
             margin-bottom: pxr(24);
+            text-transform: uppercase;
+            text-align: center;
+            color: var(--color-grey);
+        }
+
+        .buttons-wrap {
+            padding: pxr(12);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            background-color: var(--color-blue);
+            border-radius: pxr(10);
+        }
+
+        .button-left,
+        .button-right {
+            padding-top: pxr(6);
+            padding-bottom: pxr(6);
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-basis: 50%;
+            justify-content: center;
+            align-items: center;
+            border-radius: pxr(10);
+            &.active {
+                background-color: var(--color-grey);
+            }
+
+            .icon {
+                width: pxr(36);
+                height: pxr(36);
+            }
         }
     }
 }
