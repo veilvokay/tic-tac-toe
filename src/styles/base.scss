@@ -1,6 +1,29 @@
+* {
+    box-sizing: border-box;
+}
 body {
     margin: 0;
     padding: 0;
     background-color: var(--color-blue);
     color: var(--color-blue);
+    text-decoration: none;
+    font-family: var(--main-font);
+}
+
+.button {
+    padding: pxr(12) pxr(24);
+    background-color: var(--color-grey);
+    border-radius: pxr(16);
+    display: block;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    transition: all 0.25s ease-in-out;
+    
+    &:hover {
+        background-color: var(--color-grey-dark);
+    }
 }
