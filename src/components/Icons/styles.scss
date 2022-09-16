@@ -1,0 +1,9 @@
+@import '/src/styles/pxr.scss';
+
+.icon {
+    width: pxr(24);
+    height: pxr(24);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
