@@ -8,6 +8,13 @@
     justify-content: center;
     width: pxr(400);
 
+    &__title {
+        width: pxr(54);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     &__link {
         &.first {
             background-color: var(--color-orange);
@@ -44,21 +51,37 @@
         .buttons-wrap {
             padding: pxr(12);
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
             width: 100%;
             background-color: var(--color-blue);
             border-radius: pxr(10);
         }
 
+        button {
+            transition: all 0.25s ease-in-out;
+            &:hover {
+                background-color: rgba($color: #a8bec9, $alpha: 0.2);
+            }
+
+            &.active {
+                .icon-cross > svg path {
+                    fill: var(--color-blue);
+                }
+                .icon-circle > svg circle {
+                    stroke: var(--color-blue);
+                }
+            }
+        }
+
         .button-left,
         .button-right {
             padding-top: pxr(6);
             padding-bottom: pxr(6);
-            width: 50%;
+            width: 48%;
             height: 100%;
             display: flex;
-            flex-basis: 50%;
+            flex-basis: 48%;
             justify-content: center;
             align-items: center;
             border-radius: pxr(10);

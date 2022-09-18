@@ -6,4 +6,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    svg {
+        path, circle {
+            transition: all 0.25s ease-in-out;
+        }
+    }
 }
