@@ -1,10 +1,13 @@
 import React from 'react';
 import './App.css';
+import { PlayerContextPrivder } from './constants/Player';
 import Router from './Router';
 
 function App() {
   return (
-    <Router />
+    <PlayerContextPrivder>
+      <Router />
+    </PlayerContextPrivder>
   );
 }
 

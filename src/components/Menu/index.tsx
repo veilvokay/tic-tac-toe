@@ -1,15 +1,16 @@
 import './styles.scss'
-import React, { useState } from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { Game, GameType } from '../../constants/routes'
 import { IconsMap } from '../Icons/IconsMap';
 import { Icon } from '../Icons/Icon';
+import { MarkerType, PlayerContext } from '../../constants/Player';
 
 const Menu = () => {
-  const [isCross, setIsCross] = useState<boolean>(true);
+  const playerCtx = useContext(PlayerContext);
 
-  const handleMarkSelect = () => {
-    setIsCross(!isCross);
+  const handleClick = (marker: MarkerType) => {
+    playerCtx.setMarker(marker);
   }
 
   return (
@@ -27,13 +28,19 @@ const Menu = () => {
         <div className="mark-picker">
           <h2 className="mark-picker__title title-h4">Pick player 1's mark</h2>
           <div className="buttons-wrap">
-            <button className={`button-left ${isCross ? 'active' : ''}`} onClick={handleMarkSelect}>
+            <button
+              className={`button-left ${playerCtx.marker === MarkerType.Cross ? 'active' : ''}`}
+              onClick={() => handleClick(MarkerType.Cross)}
+            >
               <Icon
                 className="icon-cross"
                 content={<IconsMap.IconCross />}
               />
             </button>
-            <button className={`button-right ${!isCross ? 'active' : ''}`} onClick={handleMarkSelect}>
+            <button
+              className={`button-right ${playerCtx.marker === MarkerType.Circle ? 'active' : ''}`}
+              onClick={() => handleClick(MarkerType.Circle)}
+            >
               <Icon
                 className="icon-circle"
                 content={<IconsMap.IconCircle />}
