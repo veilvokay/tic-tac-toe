@@ -2,4 +2,24 @@
 
 .game-page {
     background-color: var(--color-blue);
+
+    &__menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &-icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &-reset {
+            width: pxr(36);
+            height: pxr(36);
+            .icon-reset {
+                path {
+                    stroke: var(--color-blue);
+                }
+            }
+        }
+    }
 }
