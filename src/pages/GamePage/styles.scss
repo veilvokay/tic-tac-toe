@@ -3,7 +3,24 @@
 .game-page {
     background-color: var(--color-blue);
 
+    .container {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    &__content {
+        margin: 0 auto;
+        width: pxr(320);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
     &__menu {
+        margin-bottom: pxr(16);
+        width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -21,5 +38,25 @@
                 }
             }
         }
+    }
+
+    &__gamefield {
+        margin: 0 auto;
+        width: 100%;
+        height: pxr(320);
+        &-cells {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            &:not(:last-of-type) {
+                margin-bottom: pxr(16);
+            }
+        }
+    }
+
+    .gamefield-cell {
+        padding: 0;
+        width: pxr(96);
+        height: pxr(96);
     }
 }

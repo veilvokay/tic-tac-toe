@@ -2,6 +2,7 @@ import React, { createContext } from "react";
 import useLocalStorage from "../hooks/useLocalStorage";
 
 export enum MarkerType {
+    Empty = 'empty',
     Cross = 'cross',
     Circle = 'circle',
 }
